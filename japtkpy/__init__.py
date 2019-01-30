@@ -1,1 +1,1 @@
-from .src.tokenizer import Tokenizer
+from .src import Tokenizer

@@ -1,3 +1,5 @@
+import os
+
 from rakutenma import RakutenMA
 
 
@@ -14,7 +16,8 @@ class Tokenizer:
         return [w for w, t in self.__rma.tokenize(sentence)]
 
     def __load_model(self):
-        self.__rma.load(self.__FILE_PATH_MODEL)
+        file_path = os.path.dirname(__file__) + '/' + self.__FILE_PATH_MODEL
+        self.__rma.load(file_path)
 
     @classmethod
     def initialize(cls):
